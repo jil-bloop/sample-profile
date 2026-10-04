@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yayasan Aria Putra Utama | Panti Asuhan</title>
+<meta name="description" content="Website resmi Yayasan Aria Putra Utama: Panti Asuhan.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { sky2:'#38A3F5', skyd:'#1F7BD1', mint:'#7FD1AE', mintd:'#3FA37C', sun:'#FFC93C', sund:'#F5A700', cream:'#FFFBF0' },
+  fontFamily: { sans:['Nunito','ui-rounded','system-ui','sans-serif'] }
+}}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  .blob{border-radius:62% 38% 55% 45% / 48% 55% 45% 52%}
+  input,select,textarea{transition:box-shadow .15s,border-color .15s}
+</style>
+</head>
+<body class="font-sans bg-cream text-slate-700">
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+  <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#beranda" class="flex items-center gap-2">
+      <span class="w-10 h-10 rounded-full bg-sun flex items-center justify-center text-xl shadow">🌈</span>
+      <span class="leading-tight">
+        <span class="block font-extrabold text-skyd text-sm">Yayasan Aria Putra Utama</span>
+        <span class="block text-xs text-mintd font-semibold">Panti Asuhan</span>
+      </span>
+    </a>
+    <ul class="hidden lg:flex items-center gap-6 font-semibold text-sm">
+      <li><a class="hover:text-skyd" href="#beranda">Beranda</a></li>
+      <li><a class="hover:text-skyd" href="#profil">Profil Panti</a></li>
+      <li><a class="hover:text-skyd" href="#donasi">Donasi</a></li>
+      <li><a class="hover:text-skyd" href="#kontak">Kontak</a></li>
+    </ul>
+    <div class="flex items-center gap-2">
+      <a href="#donasi" class="bg-sun hover:bg-sund text-slate-800 font-extrabold text-sm px-5 py-2 rounded-full shadow transition">Donasi</a>
+      <button id="menuBtn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <ul id="mobileMenu" class="hidden lg:hidden px-4 pb-4 space-y-1 font-semibold text-sm bg-white border-t">
+    <li><a class="block py-2" href="#beranda">Beranda</a></li>
+    <li><a class="block py-2" href="#profil">Profil Panti</a></li>
+    <li><a class="block py-2" href="#donasi">Donasi</a></li>
+    <li><a class="block py-2" href="#kontak">Kontak</a></li>
+  </ul>
+</header>
+
+<!-- HERO -->
+<section id="beranda" class="relative overflow-hidden bg-gradient-to-br from-sky-100 via-white to-emerald-50">
+  <div class="absolute -top-16 -right-16 w-72 h-72 bg-sun/40 blob"></div>
+  <div class="absolute -bottom-20 -left-16 w-72 h-72 bg-mint/40 blob"></div>
+  <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="inline-block bg-sun/30 text-sund font-bold text-sm px-4 py-1 rounded-full mb-4">Selamat datang 👋</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-skyd leading-tight">Tempat anak-anak tumbuh, belajar, dan merasa dicintai</h1>
+      <p class="mt-5 text-lg">Yayasan Aria Putra Utama mengelola sebuah Panti Asuhan. Kami merawat anak asuh seperti keluarga sendiri, menemani mereka bersekolah, mengaji, dan tumbuh dengan percaya diri.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#profil" class="bg-skyd hover:bg-sky2 text-white font-extrabold px-6 py-3 rounded-full shadow-lg transition">Kenali Kami</a>
+        <a href="#donasi" class="bg-sun hover:bg-sund text-slate-800 font-extrabold px-6 py-3 rounded-full shadow-lg transition">Salurkan Donasi</a>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4 text-center">
+      <div class="bg-white rounded-3xl p-6 shadow-md rotate-2"><div class="text-5xl">🧸</div><p class="mt-2 font-bold text-skyd">Tumbuh bersama</p></div>
+      <div class="bg-white rounded-3xl p-6 shadow-md -rotate-2 mt-6"><div class="text-5xl">🏡</div><p class="mt-2 font-bold text-mintd">Rumah yang hangat</p></div>
+      <div class="bg-white rounded-3xl p-6 shadow-md -rotate-2"><div class="text-5xl">📚</div><p class="mt-2 font-bold text-sund">Rajin bersekolah</p></div>
+      <div class="bg-white rounded-3xl p-6 shadow-md rotate-2 mt-6"><div class="text-5xl">💛</div><p class="mt-2 font-bold text-skyd">Dibimbing dengan kasih</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil" class="max-w-6xl mx-auto px-4 py-16">
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <h2 class="text-3xl font-extrabold text-skyd">Profil Panti Asuhan</h2>
+    <p class="mt-3">Kenali anak asuh, kegiatan harian, dan kebutuhan panti.</p>
+  </div>
+
+  <div id="tab-panti" class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white rounded-3xl p-6 shadow border-t-8 border-sky2 text-center">
+      <div class="text-5xl">👧👦</div>
+      <p class="text-5xl font-extrabold text-skyd mt-2">30</p>
+      <p class="font-bold">Anak asuh saat ini</p>
+      <p class="text-xs text-slate-500 mt-1">Ganti angka sesuai data terbaru</p>
+    </div>
+    <div class="bg-white rounded-3xl p-6 shadow border-t-8 border-sun">
+      <h3 class="font-extrabold text-xl text-sund mb-3">☀️ Kegiatan Harian</h3>
+      <ul class="space-y-2 text-sm">
+        <li><b>04.30</b> Salat subuh dan mengaji</li>
+        <li><b>06.30</b> Sarapan, lalu berangkat sekolah</li>
+        <li><b>15.00</b> Les belajar dan keterampilan</li>
+        <li><b>18.00</b> Salat magrib dan mengaji</li>
+        <li><b>20.00</b> Belajar mandiri dan istirahat</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-3xl p-6 shadow border-t-8 border-mint">
+      <h3 class="font-extrabold text-xl text-mintd mb-3">🛒 Kebutuhan Panti</h3>
+      <ul class="space-y-2 text-sm list-disc pl-5">
+        <li>Beras, minyak, dan bahan makanan</li>
+        <li>Perlengkapan sekolah dan seragam</li>
+        <li>Biaya pendidikan anak asuh</li>
+        <li>Obat-obatan dan vitamin</li>
+        <li>Buku bacaan dan alat tulis</li>
+      </ul>
+      <a href="#donasi" class="inline-block mt-4 text-sm font-bold text-skyd hover:underline">Bantu lewat donasi →</a>
+    </div>
+  </div>
+</section>
+
+<!-- KEGIATAN -->
+<section id="kegiatan" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-skyd text-center mb-8">Kegiatan & Informasi Terbaru</h2>
+    <div id="listKegiatan" class="grid md:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- DONASI -->
+<section id="donasi" class="max-w-6xl mx-auto px-4 py-16">
+  <div class="text-center max-w-2xl mx-auto mb-10">
+    <h2 class="text-3xl font-extrabold text-skyd">Donasi Panti Asuhan</h2>
+    <p class="mt-3">Setiap donasi masuk ke kebutuhan makan, sekolah, dan kesehatan anak asuh.</p>
+  </div>
+  <ol class="max-w-2xl mx-auto mb-8 grid sm:grid-cols-3 gap-3 text-sm text-center">
+    <li class="bg-sky-100 rounded-2xl p-3"><b>1.</b> Transfer ke rekening atau scan QRIS</li>
+    <li class="bg-yellow-100 rounded-2xl p-3"><b>2.</b> Isi form konfirmasi dan unggah bukti</li>
+    <li class="bg-emerald-100 rounded-2xl p-3"><b>3.</b> Pengurus memverifikasi donasi Anda</li>
+  </ol>
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="space-y-6">
+      <div class="bg-white rounded-3xl p-6 shadow border-l-8 border-sun">
+        <h3 class="font-extrabold text-lg text-sund mb-3">🏦 Transfer Bank</h3>
+        <p class="text-sm">Bank [NAMA BANK]</p>
+        <div class="flex items-center gap-3 my-1">
+          <span id="rek" class="text-2xl font-extrabold tracking-wider text-slate-800">0000 0000 0000</span>
+          <button id="copyRek" class="text-xs bg-sky-100 hover:bg-sky-200 text-skyd font-bold px-3 py-1 rounded-full">Salin</button>
+        </div>
+        <p class="text-sm">a.n. Yayasan Aria Putra Utama</p>
+      </div>
+      <div class="bg-white rounded-3xl p-6 shadow border-l-8 border-mint text-center">
+        <h3 class="font-extrabold text-lg text-mintd mb-3">📱 QRIS</h3>
+        <div class="mx-auto w-48 h-48 rounded-2xl border-4 border-dashed border-mint flex items-center justify-center text-sm text-slate-400 p-3">
+          Ganti dengan gambar QRIS:<br>&lt;img src="qris.png"&gt;
+        </div>
+        <p class="text-xs mt-3 text-slate-500">Scan dengan aplikasi bank atau dompet digital apa saja.</p>
+      </div>
+    </div>
+
+    <form id="formDonasi" class="bg-white rounded-3xl shadow-lg p-6 md:p-8 space-y-4">
+      <h3 class="font-extrabold text-lg text-skyd">Konfirmasi Donasi</h3>
+      <div><label class="lbl">Nama Donatur <span class="text-red-500">*</span></label><input name="nama" required class="inp" placeholder="Boleh ditulis Hamba Allah"></div>
+      <div>
+        <label class="lbl">Nominal (Rp) <span class="text-red-500">*</span></label>
+        <input id="nominal" name="nominal" required inputmode="numeric" class="inp" placeholder="100.000">
+        <div class="flex flex-wrap gap-2 mt-2">
+          <button type="button" data-n="50000" class="chip">50 rb</button>
+          <button type="button" data-n="100000" class="chip">100 rb</button>
+          <button type="button" data-n="250000" class="chip">250 rb</button>
+          <button type="button" data-n="500000" class="chip">500 rb</button>
+        </div>
+      </div>
+      <div><label class="lbl">Bukti Transfer <span class="text-red-500">*</span></label><input type="file" name="bukti" required accept=".jpg,.jpeg,.png,.pdf" class="file"></div>
+      <button class="w-full bg-sun hover:bg-sund text-slate-800 font-extrabold py-3 rounded-full shadow-lg transition">Kirim Konfirmasi</button>
+    </form>
+  </div>
+</section>
+
+<!-- KONTAK / FOOTER -->
+<footer id="kontak" class="bg-skyd text-white">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8">
+    <div>
+      <h4 class="font-extrabold text-lg mb-2">Yayasan Aria Putra Utama</h4>
+      <p class="text-sm text-sky-100">Panti Asuhan. Kami menerima kunjungan setiap hari, 08.00 sampai 16.00.</p>
+    </div>
+    <div>
+      <h4 class="font-extrabold text-lg mb-2">📍 Alamat</h4>
+      <p class="text-sm text-sky-100">Jl. [Nama Jalan] No. [..], [Kelurahan], [Kecamatan], [Kota/Kabupaten], [Provinsi] [Kode Pos]</p>
+    </div>
+    <div>
+      <h4 class="font-extrabold text-lg mb-2">💬 WhatsApp Pengurus</h4>
+      <a id="waLink" href="#" target="_blank" rel="noopener" class="inline-block bg-sun text-slate-800 font-extrabold text-sm px-5 py-2 rounded-full hover:bg-sund transition">+62 812-0000-0000</a>
+    </div>
+  </div>
+  <div class="border-t border-white/20 text-center text-xs py-4 text-sky-100">
+    © <span id="yr"></span> Yayasan Aria Putra Utama. Hak cipta dilindungi.
+  </div>
+</footer>
+
+<style type="text/tailwindcss">
+  @layer components {
+    .lbl{ @apply block text-sm font-bold mb-1; }
+    .inp{ @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 focus:outline-none focus:ring-4 focus:ring-sky-200 focus:border-sky2; }
+    .file{ @apply w-full text-sm file:mr-3 file:rounded-full file:border-0 file:bg-sky-100 file:text-skyd file:font-bold file:px-4 file:py-2 hover:file:bg-sky-200; }
+    .chip{ @apply text-xs font-bold bg-sun/30 hover:bg-sun px-3 py-1 rounded-full transition; }
+  }
+</style>
+
+<script>
+// ====== KONFIGURASI: ganti dengan data asli yayasan ======
+const WA_NUMBER = "6281200000000";   // format 62, tanpa 0 di depan
+const REKENING  = "0000 0000 0000";
+// =========================================================
+
+const $ = (s) => document.querySelector(s);
+const MAX_MB = 2;
+
+$('#yr').textContent = new Date().getFullYear();
+$('#rek').textContent = REKENING;
+$('#waLink').href = `https://wa.me/${WA_NUMBER}`;
+
+// Menu mobile
+$('#menuBtn').onclick = () => $('#mobileMenu').classList.toggle('hidden');
+document.querySelectorAll('#mobileMenu a').forEach(a => a.onclick = () => $('#mobileMenu').classList.add('hidden'));
+
+// ===== Penyimpanan data (localStorage; ganti dengan backend untuk data terpusat) =====
+const DB = {
+  get(k){ try { return JSON.parse(localStorage.getItem('apu_'+k)) || []; } catch { return []; } },
+  set(k,v){ localStorage.setItem('apu_'+k, JSON.stringify(v)); }
+};
+
+// Kegiatan
+const esc = (t) => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let kg = DB.get('kegiatan');
+if (!kg.length) kg = [
+  {judul:'Kegiatan Mengaji Bersama', tgl:'Setiap hari', isi:'Anak asuh mengaji bersama pembina setiap subuh dan magrib.'},
+  {judul:'Les Belajar Sore', tgl:'Setiap sore', isi:'Anak asuh mengerjakan PR dan belajar keterampilan bersama pembina.'},
+  {judul:'Terima Kasih Donatur', tgl:'Berkelanjutan', isi:'Donasi Anda membantu kebutuhan makan dan sekolah anak asuh.'}];
+$('#listKegiatan').innerHTML = kg.slice(0,6).map(k => `<article class="bg-cream rounded-3xl p-6 shadow"><p class="text-xs font-bold text-sund">${esc(k.tgl)}</p><h3 class="font-extrabold text-skyd text-lg mt-1">${esc(k.judul)}</h3><p class="text-sm mt-2">${esc(k.isi)}</p></article>`).join('');
+
+// Kompres gambar bukti agar muat di penyimpanan
+function readProof(file) {
+  return new Promise(res => {
+    if (!file.type.startsWith('image/')) return res('');
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => {
+      const r = Math.min(1, 700 / Math.max(img.width, img.height)), c = document.createElement('canvas');
+      c.width = img.width * r; c.height = img.height * r;
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url); res(c.toDataURL('image/jpeg', .6));
+    };
+    img.onerror = () => res(''); img.src = url;
+  });
+}
+
+// Salin rekening
+$('#copyRek').onclick = async () => {
+  try { await navigator.clipboard.writeText(REKENING.replace(/\s/g, '')); $('#copyRek').textContent = 'Tersalin ✓'; }
+  catch { $('#copyRek').textContent = 'Salin manual'; }
+  setTimeout(() => $('#copyRek').textContent = 'Salin', 2000);
+};
+
+// Format nominal
+const nominal = $('#nominal');
+const fmt = (v) => v.replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+nominal.oninput = () => nominal.value = fmt(nominal.value);
+document.querySelectorAll('.chip').forEach(c => c.onclick = () => nominal.value = fmt(c.dataset.n));
+
+// Cek ukuran berkas
+function fileTooBig(form) {
+  for (const f of form.querySelectorAll('input[type=file]')) {
+    if (f.files[0] && f.files[0].size > MAX_MB * 1024 * 1024) return f.previousElementSibling.textContent.replace('*', '').trim();
+  }
+  return null;
+}
+
+// Konfirmasi donasi
+$('#formDonasi').onsubmit = async (e) => {
+  e.preventDefault();
+  const f = e.target, big = fileTooBig(f);
+  if (big) { alert(`Berkas "${big}" melebihi ${MAX_MB} MB.`); return; }
+  const d = new FormData(f), file = d.get('bukti');
+  const list = DB.get('donasi');
+  list.unshift({ id: Date.now(), tgl: new Date().toISOString(), nama: d.get('nama'),
+    nominal: Number(String(d.get('nominal')).replace(/\D/g,'')), fileName: file.name,
+    bukti: await readProof(file), status: 'Menunggu' });
+  try { DB.set('donasi', list); } catch { alert('Penyimpanan penuh. Hubungi pengurus via WhatsApp.'); }
+  const pesan = `*KONFIRMASI DONASI*\n\nNama: ${d.get('nama')}\nNominal: Rp ${d.get('nominal')}\n\nBukti transfer saya lampirkan di chat ini.`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(pesan)}`, '_blank');
+  alert('Terima kasih atas kebaikan Anda. Donasi tercatat dan menunggu verifikasi pengurus.');
+  f.reset();
+};
+</script>
+</body>
+</html>
